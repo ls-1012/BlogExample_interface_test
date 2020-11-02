@@ -1,0 +1,91 @@
+
+    <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+table.hovertable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
+}
+table.hovertable th {
+    background-color:#ff6347;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table.hovertable tr {
+    background-color:#d4e3e5;
+}
+table.hovertable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+</style>
+
+<!-- Table goes in the document BODY -->
+
+<head>
+
+<meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+
+</head>
+
+<table class="hovertable">
+<tr>
+    <th>接口 URL</th><th>请求数据</th><th>接口响应数据</th><th>接口调用耗时(单位：ms)</th><th>断言词</th><th>测试结果</th>
+</tr>
+
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/register/</td><td>{&quot;username&quot;:&quot;wulaoshizz219&quot;,&quot;password&quot;:&quot;wulaoshi999&quot;,&quot;email&quot;: &quot;wulaoshi@qq.com&quot;}</td><td>{&quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1156}</td><td>0.14551329612731934</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        pass</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/login/</td><td>{&quot;username&quot;:&quot;wulaoshizz219&quot;,&quot;password&quot;:&quot;3d6014cd103fd77b9c70c4c76f099ce7&quot;}</td><td>{&quot;token&quot;: &quot;ca70ec4637808208a372d00f562e7b19&quot;, &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1156, &quot;login_time&quot;: &quot;2020-10-28 14:06:23&quot;}</td><td>0.14261889457702637</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        pass</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/create/</td><td>{&quot;userid&quot;:1156, &quot;token&quot;: &quot;ca70ec4637808208a372d00f562e7b19&quot;, &quot;title&quot;:&quot;java_test1&quot;, &quot;content&quot;:&quot;java_test1&quot;}</td><td>{&quot;data&quot;: [{&quot;content&quot;: &quot;java_test1&quot;, &quot;title&quot;: &quot;java_test1&quot;}], &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1156}</td><td>0.10970640182495117</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        pass</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/create/</td><td>{&quot;userid&quot;:1156, &quot;token&quot;: &quot;ca70ec4637808208a372d00f562e7b19&quot;, &quot;title&quot;:&quot;python_test2&quot;, &quot;content&quot;:&quot;python_test2&quot;}</td><td>{&quot;data&quot;: [{&quot;content&quot;: &quot;python_test2&quot;, &quot;title&quot;: &quot;python_test2&quot;}], &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1156}</td><td>0.09872770309448242</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        pass</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/getBlogsOfUser/</td><td>{&quot;userid&quot;:1156, &quot;token&quot;: &quot;ca70ec4637808208a372d00f562e7b19&quot;}</td><td>{&quot;data&quot;: [{&quot;update_time&quot;: null, &quot;title&quot;: &quot;java_test1&quot;, &quot;content&quot;: &quot;java_test1&quot;, &quot;articleId&quot;: 305, &quot;owner&quot;: 1156, &quot;posted_on&quot;: &quot;2020-10-28 14:06:23&quot;}, {&quot;update_time&quot;: null, &quot;title&quot;: &quot;python_test2&quot;, &quot;content&quot;: &quot;python_test2&quot;, &quot;articleId&quot;: 306, &quot;owner&quot;: 1156, &quot;posted_on&quot;: &quot;2020-10-28 14:06:23&quot;}], &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1156}</td><td>0.09175372123718262</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        pass</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/update/</td><td>{&quot;userid&quot;:1156, &quot;token&quot;: &quot;ca70ec4637808208a372d00f562e7b19&quot;, &quot;articleId&quot;:305, &quot;title&quot;:&quot;java&quot;, &quot;content&quot;:&quot;core java&quot;}</td><td>{&quot;articleId&quot;: 305, &quot;update_time&quot;: &quot;2020-10-28 14:06:24&quot;, &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1156}</td><td>0.12347984313964844</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        pass</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/getBlogsOfUser/</td><td>{&quot;userid&quot;:1156, &quot;token&quot;: &quot;ca70ec4637808208a372d00f562e7b19&quot;}</td><td>{&quot;data&quot;: [{&quot;update_time&quot;: &quot;2020-10-28 14:06:24&quot;, &quot;title&quot;: &quot;java&quot;, &quot;content&quot;: &quot;core java&quot;, &quot;articleId&quot;: 305, &quot;owner&quot;: 1156, &quot;posted_on&quot;: &quot;2020-10-28 14:06:23&quot;}, {&quot;update_time&quot;: null, &quot;title&quot;: &quot;python_test2&quot;, &quot;content&quot;: &quot;python_test2&quot;, &quot;articleId&quot;: 306, &quot;owner&quot;: 1156, &quot;posted_on&quot;: &quot;2020-10-28 14:06:23&quot;}], &quot;code&quot;: &quot;00&quot;, &quot;userid&quot;: 1156}</td><td>0.1017296314239502</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        pass</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/getBlogContent/</td><td>305</td><td>{&quot;code&quot;: &quot;00&quot;, &quot;data&quot;: [{&quot;update_time&quot;: &quot;2020-10-28 14:06:24&quot;, &quot;title&quot;: &quot;java&quot;, &quot;content&quot;: &quot;core java&quot;, &quot;articleId&quot;: 305, &quot;owner&quot;: 1156, &quot;posted_on&quot;: &quot;2020-10-28 14:06:23&quot;}]}</td><td>0.07879257202148438</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        pass</td>
+    </tr>
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+        <td>http://39.100.104.214:8080/getBlogContent/</td><td>305,306</td><td>{&quot;code&quot;: &quot;999&quot;, &quot;articleId&quot;: &quot;305,306&quot;}</td><td>0.09873771667480469</td><td>&quot;code&quot;: &quot;00&quot;</td><td>
+        <font color=red>
+        fail</td>
+    </tr>
+</table>
+
+

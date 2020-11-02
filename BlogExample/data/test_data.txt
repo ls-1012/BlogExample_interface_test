@@ -1,0 +1,10 @@
+register||{"username":"wulaoshizz${generate_username}","password":"wulaoshi999","email": "wulaoshi@qq.com"}||post||"code": "00"||userid----userid": (\w+)}
+login||{"username":"wulaoshizz${get_username}","password":"$md5{wulaoshi999}"}||post||"code": "00"||token----token": "(\w+)"
+create||{"userid":%{userid}, "token": "%{token}", "title":"java_test1", "content":"java_test1"}||post||"code": "00"||None
+create||{"userid":%{userid}, "token": "%{token}", "title":"python_test2", "content":"python_test2"}||post||"code": "00"||None
+getBlogsOfUser||{"userid":%{userid}, "token": "%{token}"}||post||"code": "00"||articleId1----articleId": (\d+)
+update||{"userid":%{userid}, "token": "%{token}", "articleId":%{articleId1}, "title":"java", "content":"core java"}||put||"code": "00"||None
+getBlogsOfUser||{"userid":%{userid}, "token": "%{token}"}||post||"code": "00"||articleId2----(?<="python_test2", ")articleId": (\d+)
+getBlogContent||%{articleId1}||get||"code": "00"||None
+getBlogsContent||%{articleId1},%{articleId2}||get||"code": "00"||None
+delete||{"userid":%{userid}, "token": "%{token}", "articleId":[%{articleId1},%{articleId2}]}||post||"code": "00"||None
